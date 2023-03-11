@@ -9,6 +9,8 @@ on:
       - main         # cover main
       - 'dev-*'      # cover dev-new, dev-this-is-new ...
       - 'feat/**'    # cover feat/new, feat/new/button, ...
+    paths-ignore:
+      - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
