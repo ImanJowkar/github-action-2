@@ -4,6 +4,11 @@ on:
     types:
       - opened
   workflow_dispatch:
+  push:
+    branches:
+      - main         # cover main
+      - 'dev-*'      # cover dev-new, dev-this-is-new ...
+      - 'feat/**'    # cover feat/new, feat/new/button, ...
 jobs:
   deploy:
     runs-on: ubuntu-latest
